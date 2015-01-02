@@ -19,7 +19,7 @@ class CoreObject(models.Model):
 
 
     def addname(self, namevalue, dialect):
-        from core.models.name import Name
+        from butter.core.models.name import Name
         name = Name()
         name.value = namevalue
         name.dialect = dialect
@@ -35,7 +35,7 @@ class CoreObject(models.Model):
 
 
     def fromjson(self, json):
-        from core.models.name import Name
+        from butter.core.models.name import Name
 
         self.id = json['id']
 
@@ -64,7 +64,7 @@ class CoreObject(models.Model):
 
 
     def getnames(self):
-        from core.models.name import Name
+        from butter.core.models.name import Name
         return Name.objects.filter(namedobject_id=self.id)
 
 
@@ -81,17 +81,17 @@ class CoreObject(models.Model):
                 return name.value
 
     def internalname(self):
-        from core.models.dialect import internaldialect
+        from butter.core.models.dialect import internaldialect
         return self.nameindialect(internaldialect())
 
 
     def defaultname(self):
-        from core.models.dialect import defaultdialect
+        from butter.core.models.dialect import defaultdialect
         return self.nameindialect(defaultdialect())
 
 
     def abbreviation(self):
-        from core.models.dialect import abbrevdialect
+        from butter.core.models.dialect import abbrevdialect
         return self.nameindialect(abbrevdialect())
 
 
@@ -109,3 +109,4 @@ class CoreObject(models.Model):
             json['names'].append(name.tojson())
         
         return json
+

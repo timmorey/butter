@@ -4,7 +4,7 @@
 
 from django.db import models
 
-from core.models import CoreObject
+from butter.core.models import CoreObject
 
 
 class Unit(CoreObject):
@@ -134,10 +134,10 @@ def createunit(unittype=None,
                internalname=None,
                abbrev=None):
     
-    from core.models.dialect import Dialect
-    from core.models.dialect import defaultdialect
-    from core.models.dialect import internaldialect
-    from core.models.dialect import abbrevdialect
+    from butter.core.models.dialect import Dialect
+    from butter.core.models.dialect import defaultdialect
+    from butter.core.models.dialect import internaldialect
+    from butter.core.models.dialect import abbrevdialect
 
     unit = Unit()
     unit.unittype = unittype
@@ -172,7 +172,7 @@ def findunits(searchstring):
 
 
 def unitwithabbrev(abbrev):
-    from core.models.dialect import abbrevdialect
+    from butter.core.models.dialect import abbrevdialect
 
     for unit in Unit.objects.all():
         for name in unit.getnames():

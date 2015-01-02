@@ -4,7 +4,7 @@
 
 from django.db import models
 
-from core.models import CoreObject
+from butter.core.models import CoreObject
 
 
 class Resource(CoreObject):

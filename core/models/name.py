@@ -6,7 +6,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
 from django.db import models
 
-from core.models.dialect import Dialect
+from butter.core.models.dialect import Dialect
 
 
 class Name(models.Model):

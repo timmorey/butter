@@ -3,7 +3,7 @@
 #
 
 from django.db import models
-from core.models import CoreObject
+from butter.core.models import CoreObject
 
 
 class Index(CoreObject):
@@ -21,8 +21,8 @@ class Index(CoreObject):
 
 
     def fromjson(self, json):
-        from core.models.dialect import Dialect
-        from core.modesl.unit import Unit
+        from butter.core.models.dialect import Dialect
+        from butter.core.modesl.unit import Unit
 
         super(Index, self).fromjson(json)
 
@@ -67,8 +67,8 @@ class Index(CoreObject):
 
 
     def tojson(self):
-        from core.models.dialect import Dialect
-        from core.models.unit import Unit
+        from butter.core.models.dialect import Dialect
+        from butter.core.models.unit import Unit
 
         json = super(Index, self).tojson()
         

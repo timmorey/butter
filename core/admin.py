@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from core.models import Dialect, Resource, Unit
+from butter.core.models import Dialect, Resource, Unit
 
 admin.site.register(Dialect)
 admin.site.register(Resource)

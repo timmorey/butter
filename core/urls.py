@@ -4,7 +4,7 @@
 
 from django.conf.urls import patterns, url
 
-from core import views
+from butter.core import views
 
 idpattern = '[a-zA-Z0-9_-]+'
 

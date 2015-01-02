@@ -2,7 +2,7 @@
 # dialect.py - Created by Timothy Morey on 2/8/2014
 #
 
-from core.models.coreobject import CoreObject
+from butter.core.models.coreobject import CoreObject
 
 from django.db import models
 
@@ -54,4 +54,4 @@ def internaldialect():
 def abbrevdialect():
     for dialect in Dialect.objects.all():
         if dialect.hasname('default-abbreviation'):
-            return dialect
+           return dialect

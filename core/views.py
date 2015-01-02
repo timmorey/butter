@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.csrf import csrf_exempt
 
-from core.models import Dialect, Index, Resource, Unit
+from butter.core.models import Dialect, Index, Resource, Unit
 
 
 ################################################################################
